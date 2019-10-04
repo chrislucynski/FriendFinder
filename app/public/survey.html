@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Let's get together!</title>
+  </head>
+  <body>
+    <h1 id="header">Survey Questions</h1>
+        <hr>
+        <h2 id="about"> About You
+            <p>Name (Required)</p>
+            <input id="name" type="text">
+            <p>Link to Photo Image (Required)</p>
+            <input id="photo-link" type="text">
+        </h2>
+        <hr>
+        <ul id="question-list">
+            <li>Question 1: I like country music.
+                <select id="1">
+                    <option value="">select an option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </li>
+            <li>Question 2: Disney is my life.
+                <select id="2">
+                    <option value="">select an option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </li>
+            <li>Question 3: Dogs are better than humans</li>
+            <li>Question 4:</li>
+            <li>Question 5:</li>
+            <li>Question 6:</li>
+            <li>Question 7:</li>
+            <li>Question 8:</li>
+            <li>Question 9:</li>
+            <li>Question 10:</li>
+        </ul>
+        <button id="submit">Submit</button>
+
+
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+      
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-content">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script>
+
+    function MyInfo (name, photo, score) {
+        this.name = name
+        this.photo = photo
+        this.score = score
+    }
+    
+    $('#submit').click(function(event){
+        var friendName = $('#name').val()
+        var photoLink = $('#photo-link').val()
+        event.preventDefault()
+        var values = [];
+        values.push($('#1').val())
+        values.push($('#2').val())
+        // values.push($('#3').val())
+        // values.push($('#4').val())
+        // values.push($('#5').val())
+        // values.push($('#6').val())
+        // values.push($('#7').val())
+        // values.push($('#8').val())
+        // values.push($('#9').val())
+        // values.push($('#10').val())
+        var myInfo = new MyInfo(friendName, photoLink, values)
+        $.post('/api/friends', myInfo, function (response){
+            $('#modal-content').text(response.name)
+            console.log(response)
+            // $('#exampleModal').on('shown.bs.modal', function () {
+            // $('#exampleModal').trigger('focus')
+            // })
+        })
+    })
+
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
