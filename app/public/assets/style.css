@@ -1,12 +1,27 @@
-body {
-    background-image: url('./images/sparkle_heart.jpg');
-    background-repeat: no-repeat;
+#home-container {
+    color: white;
+    background-color: black;
+    padding: 30px;
 }
 
-#love-connection{
+body {
+    background-image: url('https://images.pexels.com/photos/1824684/pexels-photo-1824684.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+#body-container {
+    background-image: url('https://images.pexels.com/photos/862516/pexels-photo-862516.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: fit-content; */
+}
+
+.love-connection{
     background-color: blueviolet;
 }
 
-#love-connection:hover{
+.love-connection:hover{
     background-color: pink;
 }
+

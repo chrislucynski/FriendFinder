@@ -12,7 +12,5 @@ module.exports = function(app){
     app.get("/assets/style.css", (req, res) => {
         res.sendFile(path.join(__dirname, "..", "public", "assets", "style.css"));
     });
-    app.get("/assets/images/sparkle_heart.jpg", (req, res) => {
-        res.sendFile(path.join(__dirname, "..", "public", "assets", "images", "sparkle_heart_jpg"));
-    });
+    
 }
