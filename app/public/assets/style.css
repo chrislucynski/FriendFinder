@@ -1,0 +1,12 @@
+body {
+    background-image: url('./images/sparkle_heart.jpg');
+    background-repeat: no-repeat;
+}
+
+#love-connection{
+    background-color: blueviolet;
+}
+
+#love-connection:hover{
+    background-color: pink;
+}
