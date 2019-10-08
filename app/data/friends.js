@@ -28,10 +28,7 @@ var eligibleFriends = [
         name: 'Hope Solo',
         photo: 'https://www.rollingstone.com/wp-content/uploads/2018/06/hope-solo-running-for-president-of-us-soccer-federation-dd6f4acb-7ca7-4303-8505-5e7253871228.jpg',
         score: [4, 3, 4, 4, 2, 1, 3, 2, 2, 3]
-    },
-
-
-    
+    }
 ]
 
 module.exports = eligibleFriends;

@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 
 require('./app/routing/apiRoutes')(app)
 require('./app/routing/htmlRoutes')(app)
-// require('./app/public/assets/style.css')(app)
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);

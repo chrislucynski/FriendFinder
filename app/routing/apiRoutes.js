@@ -10,6 +10,7 @@ app.get("/api/friends", function(req, res) {
 function compareScores(user){
     var totalDifference = 50;
     var closestFit;
+    console.log('See below to see how you matched with the others...')
     for(var i = 0; i < friends.length; i++){
         var scoreDifferenceArray = [];
         for(var j = 0; j < friends[i].score.length; j++){
@@ -24,8 +25,8 @@ function compareScores(user){
             closestFit = friends[i]
         }
     }
-    console.log('Closest match: ' + closestFit.name)
-    console.log(closestFit)
+    console.log('Your closest match was: ' + closestFit.name)
+    // console.log(closestFit)
     return closestFit
 }
 

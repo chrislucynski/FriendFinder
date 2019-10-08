@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/style.css">
     <title>Let's get together!</title>
@@ -22,15 +22,6 @@
         <p class="lead">Answer the questions below to be matched up with the woman of your dreams!</p>
       </div>
     
-      <!-- <h1 id="header">&hearts; Survey Questions &hearts;</h1>
-      <hr>
-      <h2 id="about"> About You
-          <p>Name (Required)</p>
-          <input id="name" type="text">
-          <p>Link to Photo Image (Required)</p>
-          <input id="photo-link" type="text">
-      </h2>
-      <hr> -->
     <div class="container text-white">
             <h4>Question 1: </h4>
             <h5>I like country music.</h5> 
@@ -142,15 +133,17 @@
                 <option value="5">5 (strongly agree)</option>
             </select>
             <br> <br>
+
         <!-- <button id="submit">Submit</button> -->
         <a class="btn btn-secondary btn-lg love-connection" id="submit" role="button">Make a l&hearts;ve connection</a>
         <br><br>
       </div>
 
-        <!-- Button trigger modal -->
-        <button type="button" id="modal-btn" class="btn btn-primary" style="display:none" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-        </button>
+
+      <!-- Button trigger modal -->
+      <button type="button" id="modal-btn" class="btn btn-primary" style="display:none" data-toggle="modal" data-target="#exampleModal">
+      Launch demo modal
+      </button>
       
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -167,14 +160,12 @@
               <br>
               <br>
               <p id="match-name" class="justify-content-center text-center lead"></p>
-              <!-- body goes here -->
             </div>
           </div>
         </div>
       </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -208,11 +199,6 @@
             $('#match-name').text(response.name)
             $('#match-pic').attr('src', response.photo)
             $('#modal-btn').click()
-            console.log(response)
-            // $('#exampleModal').on('shown.bs.modal', function () {
-            // $('#exampleModal').trigger('focus')
-            // })
-
         })
     })
     </script>
